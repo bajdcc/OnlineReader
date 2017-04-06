@@ -4,9 +4,9 @@
 	<head>
 		<title>Reading - Powered by bajdcc</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link href="materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="materialize.min.js"></script>
+		<script type="text/javascript" src="materialize.js"></script>
 		<script type="text/javascript" src="vue.min.js"></script>
 		<script type="text/javascript" src="jquery.hotkeys.js"></script>
 		<script type="text/javascript" src="jquery-mobile-events.js"></script>
@@ -182,7 +182,7 @@
 		<div class="navbar-fixed">
 			<nav>
 			<div class="nav-wrapper">
-			<a href="#!" class="brand-logo hide-on-med-and-down" v-text="logo"></a>
+			<a href="#!" class="brand-logo hide-on-med-and-down center" v-text="logo"></a>
 			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			<ul class="right hide-on-med-and-down">
 				<li><a @click="gotoprev" :class="{ 'hide': !prevb }">上一章</a></li>

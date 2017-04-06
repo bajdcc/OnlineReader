@@ -105,7 +105,7 @@ if ( $q ) {
     $fp = fopen($filename, 'r');
     $title = 'undefined';
     if ( !feof( $fp ) ) {
-        $title = fgets($fp, 4096);
+        $title = trim(fgets($fp, 4096));
     }
     $objs = array('data' => array(), 'title' => $title);
     $i = 0;

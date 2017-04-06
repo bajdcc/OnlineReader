@@ -7,6 +7,22 @@
 	</head>
 
 	<body>
+
+	<input type="text" id="new" placeholder="请输入文件名，如1000">
+	<input type="button" id="btn" value="加载小说">
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$.getJSON("getmenu.php?id="+$("#new").val()).error(function(){
+					$.getJSON("getmenu.php?id="+$("#new").val(), function(data){
+						alert("加载《"+data.title+"》成功！");
+						location.reload();
+					});
+				});
+			});
+		});
+	</script>
 <?php
 if (!file_exists('db.sqlite')) exit;
 
